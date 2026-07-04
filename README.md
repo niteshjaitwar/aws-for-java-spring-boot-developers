@@ -7,6 +7,7 @@
 ![Java](https://img.shields.io/badge/Java-21-e11d48?style=for-the-badge)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.0-16a34a?style=for-the-badge)
 ![AWS Focus](https://img.shields.io/badge/AWS-EC2%20%7C%20S3%20%7C%20Lambda-2563eb?style=for-the-badge)
+![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-0ea5e9?style=for-the-badge)
 
 Step-by-step AWS learning repository for Java and Spring Boot developers who want to start from zero, understand the main AWS services, and deploy real applications without relying on outdated guides.
 
@@ -21,11 +22,15 @@ The setup flow and AWS guidance in this repository were refreshed against offici
 
 ## Live project site
 
-This repository now includes a GitHub Pages landing site in [site/index.html](site/index.html) and a dedicated Pages workflow in [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml).
+Visit the live public website here:
 
-Expected public URL after GitHub Pages is enabled for the repository:
+- https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/
 
-- `https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/`
+This repository also includes the GitHub Pages source in [site/index.html](site/index.html) and the deployment workflow in [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml).
+
+If you want to see the source repository:
+
+- https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers
 
 ## Author
 
