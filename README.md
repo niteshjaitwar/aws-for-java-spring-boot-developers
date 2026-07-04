@@ -44,6 +44,8 @@ This repository is designed to fix that gap for Java and Spring Boot developers.
 | `04` | Build a Java Lambda | Real serverless example |
 | `05` | Next services to learn | Clear growth path |
 | `06` | Production capstone project | End-to-end architecture |
+| `07` | Route 53 + ACM + HTTPS | Custom domain and TLS |
+| `08` | Infrastructure as code | Terraform starter path |
 
 ## Included in this repo
 
@@ -114,6 +116,8 @@ aws-for-java-spring-boot-developers/
 |   +-- diagrams/
 |       +-- aws-learning-roadmap.svg
 |       +-- capstone-architecture.svg
+|   +-- screenshots/
+|       +-- README.md
 +-- deploy/
 |   +-- ec2/
 |       +-- nginx/
@@ -129,10 +133,15 @@ aws-for-java-spring-boot-developers/
 |   +-- 04-lambda-for-java/
 |   +-- 05-next-steps/
 |   +-- 06-production-capstone/
+|   +-- 07-route53-https-custom-domain/
+|   +-- 08-infrastructure-as-code/
 +-- examples/
 |   +-- ec2/todo-api/
 |   +-- s3/file-upload-service/
 |   +-- lambda/hello-lambda/
++-- infra/
+|   +-- terraform/
+|       +-- ec2-s3-baseline/
 +-- README.md
 +-- LICENSE
 +-- CONTRIBUTING.md
@@ -247,6 +256,35 @@ Topics:
 
 </details>
 
+<details>
+<summary><strong>07 - Route 53 + ACM + HTTPS</strong></summary>
+
+Start here: [docs/07-route53-https-custom-domain/README.md](docs/07-route53-https-custom-domain/README.md)
+
+Topics:
+
+- Route 53 hosted zones
+- ACM certificate request
+- DNS validation
+- Application Load Balancer
+- HTTPS for the EC2 deployment
+
+</details>
+
+<details>
+<summary><strong>08 - Infrastructure as code</strong></summary>
+
+Start here: [docs/08-infrastructure-as-code/README.md](docs/08-infrastructure-as-code/README.md)
+
+Topics:
+
+- why IaC matters
+- Terraform starter structure
+- mapping console steps to code
+- safe next step after manual AWS learning
+
+</details>
+
 ## Real examples
 
 | Example | Purpose | Link |
@@ -263,6 +301,26 @@ Topics:
 | [deploy/ec2/nginx/todo-api.conf](deploy/ec2/nginx/todo-api.conf) | reverse proxy on EC2 |
 | [deploy/ec2/README.md](deploy/ec2/README.md) | deployment asset guide |
 | [.github/workflows/java-examples-ci.yml](.github/workflows/java-examples-ci.yml) | current GitHub Actions CI |
+
+## Infrastructure as code starter
+
+Reader-friendly entry points:
+
+- [docs/08-infrastructure-as-code/README.md](docs/08-infrastructure-as-code/README.md)
+- [infra/terraform/ec2-s3-baseline/README.md](infra/terraform/ec2-s3-baseline/README.md)
+
+## Screenshots and visuals
+
+This repository now includes:
+
+- colorful local diagrams that render directly on GitHub
+- a screenshot capture guide for safe, current AWS console images
+
+Useful links:
+
+- [assets/diagrams/aws-learning-roadmap.svg](assets/diagrams/aws-learning-roadmap.svg)
+- [assets/diagrams/capstone-architecture.svg](assets/diagrams/capstone-architecture.svg)
+- [assets/screenshots/README.md](assets/screenshots/README.md)
 
 ## Important notes for readers
 
@@ -289,7 +347,7 @@ Topics:
 
 Use this GitHub repository description:
 
-> Step-by-step AWS learning path for Java Spring Boot developers, from account setup to EC2, S3, Lambda, and production-ready deployment basics.
+> Step-by-step AWS learning path for Java Spring Boot developers, from account setup to EC2, S3, Lambda, Route 53, HTTPS, and infrastructure-as-code basics.
 
 ## License
 
