@@ -1,210 +1,295 @@
 # AWS for Java Spring Boot Developers
 
-Step-by-step AWS learning repository for Java and Spring Boot developers who want to start from zero, understand core AWS services, and deploy real applications on AWS.
+![AWS learning roadmap](assets/diagrams/aws-learning-roadmap.svg)
 
-This repository is designed for beginners who know Java or Spring Boot but are new to AWS. It starts with creating an AWS account and then moves into practical hands-on work with `EC2`, `S3`, and `Lambda`.
+![Author](https://img.shields.io/badge/Author-niteshjaitwar-0f766e?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open%20Source-MIT-f59e0b?style=for-the-badge)
+![Java](https://img.shields.io/badge/Java-21-e11d48?style=for-the-badge)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.0-16a34a?style=for-the-badge)
+![AWS Focus](https://img.shields.io/badge/AWS-EC2%20%7C%20S3%20%7C%20Lambda-2563eb?style=for-the-badge)
 
-The setup flow and service docs in this repository were refreshed against official AWS documentation on `July 4, 2026`.
+Step-by-step AWS learning repository for Java and Spring Boot developers who want to start from zero, understand the main AWS services, and deploy real applications without relying on outdated guides.
 
-## Who this repo is for
+This repository is written for readers who want:
 
-- Java developers starting AWS from scratch
-- Spring Boot developers who want to deploy applications on AWS
-- Beginners looking for a practical, structured learning path
-- Developers building portfolio-ready cloud projects
+- easy-to-follow steps
+- no skipped setup details
+- real runnable Java examples
+- current AWS console names and current CLI commands
+
+The setup flow and AWS guidance in this repository were refreshed against official documentation on `July 4, 2026`.
+
+## Author
+
+Created and maintained by `niteshjaitwar`.
+
+## Why this repo exists
+
+Many AWS tutorials are either:
+
+- too shallow for real deployment
+- too advanced for beginners
+- outdated in UI, IAM advice, or commands
+
+This repository is designed to fix that gap for Java and Spring Boot developers.
 
 ## What you will learn
 
-- How to create and secure an AWS account
-- Core AWS concepts: regions, availability zones, IAM, billing, and networking
-- How to deploy a Spring Boot application on `EC2`
-- How to store and serve files with `S3`
-- How to write and run Java-based `Lambda` functions
-- How to think about cost, security, and production basics
+| Module | What you learn | Outcome |
+| --- | --- | --- |
+| `00` | AWS account setup, MFA, budgets, access | Safe AWS starting point |
+| `01` | IAM, regions, pricing, AWS mindset | Strong basics |
+| `02` | Deploy Spring Boot on EC2 | Real server deployment |
+| `03` | Upload and fetch files from S3 | Real storage integration |
+| `04` | Build a Java Lambda | Real serverless example |
+| `05` | Next services to learn | Clear growth path |
+| `06` | Production capstone project | End-to-end architecture |
 
-## What is included now
+## Included in this repo
 
 - a runnable Spring Boot Todo API for `EC2`
 - a runnable Spring Boot file upload service for `S3`
 - a runnable Java `Lambda` sample
-- current AWS console navigation names and updated CLI commands
-- direct links to official AWS documentation
+- a real `GitHub Actions` CI workflow
+- deployable `systemd` and `Nginx` config for EC2
+- visual diagrams and step-by-step module docs
 
-## Learning path
+## Best place to start
 
-1. Create and secure your AWS account
-2. Learn AWS basics and common terminology
-3. Deploy a Spring Boot app on `EC2`
-4. Integrate `S3` with a Spring Boot app
-5. Build a Java `Lambda` function
-6. Continue to API Gateway, RDS, CloudWatch, ECS, and CI/CD
+If you are completely new:
 
-## Repository tree
+1. [docs/00-aws-account-setup/README.md](docs/00-aws-account-setup/README.md)
+2. [docs/01-foundations/README.md](docs/01-foundations/README.md)
+3. [docs/02-ec2-spring-boot-deployment/README.md](docs/02-ec2-spring-boot-deployment/README.md)
+
+If you already know AWS basics:
+
+1. [examples/ec2/todo-api/README.md](examples/ec2/todo-api/README.md)
+2. [examples/s3/file-upload-service/README.md](examples/s3/file-upload-service/README.md)
+3. [examples/lambda/hello-lambda/README.md](examples/lambda/hello-lambda/README.md)
+
+If you want the full production path:
+
+1. [docs/06-production-capstone/README.md](docs/06-production-capstone/README.md)
+
+## Visual learning path
+
+```mermaid
+flowchart LR
+    A[Create AWS Account] --> B[AWS Foundations]
+    B --> C[Deploy Spring Boot on EC2]
+    B --> D[Use S3 with Spring Boot]
+    B --> E[Build Java Lambda]
+    C --> F[Production Capstone]
+    D --> F
+    E --> F
+    F --> G[CloudWatch, API Gateway, RDS, ECS, CI/CD]
+
+    classDef warm fill:#ffcf70,stroke:#7c4a03,color:#2b2112;
+    classDef green fill:#9be3a8,stroke:#166534,color:#123524;
+    classDef blue fill:#9fd3ff,stroke:#1d4ed8,color:#0f2d5c;
+    classDef pink fill:#f8b4d9,stroke:#be185d,color:#581c39;
+    classDef purple fill:#cabdff,stroke:#6d28d9,color:#2c145c;
+
+    class A warm;
+    class B blue;
+    class C green;
+    class D green;
+    class E green;
+    class F pink;
+    class G purple;
+```
+
+## Repository map
+
+<details>
+<summary><strong>Open the collapsible tree view</strong></summary>
 
 ```text
 aws-for-java-spring-boot-developers/
-+-- README.md
-+-- LICENSE
-+-- CODE_OF_CONDUCT.md
-+-- CONTRIBUTING.md
-+-- .gitignore
++-- .github/
+|   +-- workflows/
+|       +-- java-examples-ci.yml
++-- assets/
+|   +-- diagrams/
+|       +-- aws-learning-roadmap.svg
+|       +-- capstone-architecture.svg
++-- deploy/
+|   +-- ec2/
+|       +-- nginx/
+|       |   +-- todo-api.conf
+|       +-- systemd/
+|       |   +-- todo-api.service
+|       +-- README.md
 +-- docs/
 |   +-- 00-aws-account-setup/
-|   |   +-- README.md
 |   +-- 01-foundations/
-|   |   +-- README.md
 |   +-- 02-ec2-spring-boot-deployment/
-|   |   +-- README.md
 |   +-- 03-s3-with-spring-boot/
-|   |   +-- README.md
 |   +-- 04-lambda-for-java/
-|   |   +-- README.md
 |   +-- 05-next-steps/
-|       +-- README.md
+|   +-- 06-production-capstone/
 +-- examples/
-    +-- ec2/
-    |   +-- todo-api/
-    |       +-- README.md
-    +-- s3/
-    |   +-- file-upload-service/
-    |       +-- README.md
-    +-- lambda/
-        +-- hello-lambda/
-            +-- README.md
+|   +-- ec2/todo-api/
+|   +-- s3/file-upload-service/
+|   +-- lambda/hello-lambda/
++-- README.md
++-- LICENSE
++-- CONTRIBUTING.md
++-- CODE_OF_CONDUCT.md
 ```
 
-## Topic map
-
-```mermaid
-flowchart TD
-    A[AWS Account Setup] --> B[AWS Foundations]
-    B --> C[EC2 for Spring Boot Deployment]
-    B --> D[S3 for Storage and Static Assets]
-    B --> E[Lambda for Serverless Java]
-    C --> F[Real Project Deployment]
-    D --> F
-    E --> F
-    F --> G[Next Steps: API Gateway, RDS, ECS, CI/CD]
-```
+</details>
 
 ## Module guide
 
-### 00. AWS account setup
+<details>
+<summary><strong>00 - AWS account setup</strong></summary>
 
 Start here: [docs/00-aws-account-setup/README.md](docs/00-aws-account-setup/README.md)
 
 Topics:
 
-- Create your AWS account
-- Set up MFA
-- Understand billing and free tier
-- Set up `IAM Identity Center` or an IAM admin user
-- Avoid using the root user for daily work
+- create an AWS account safely
+- enable `MFA`
+- set budget alerts
+- choose `IAM Identity Center` or a simple IAM admin user setup
+- configure `aws configure sso`
 
-### 01. Foundations
+</details>
+
+<details>
+<summary><strong>01 - AWS foundations</strong></summary>
 
 Start here: [docs/01-foundations/README.md](docs/01-foundations/README.md)
 
 Topics:
 
-- Regions and availability zones
+- regions and availability zones
 - IAM basics
-- Virtual machines vs serverless
-- AWS pricing mindset
-- Shared responsibility model
+- EC2 vs Lambda mindset
+- pricing awareness
+- shared responsibility model
 
-### 02. EC2 + Spring Boot deployment
+</details>
+
+<details>
+<summary><strong>02 - Deploy Spring Boot on EC2</strong></summary>
 
 Start here: [docs/02-ec2-spring-boot-deployment/README.md](docs/02-ec2-spring-boot-deployment/README.md)
 
 Topics:
 
-- Launch an EC2 instance
-- Connect with `EC2 Instance Connect` or SSH
-- Install Java 21 on Amazon Linux 2023
-- Build and run a Spring Boot JAR
-- Configure security groups
-- Run the app behind `systemd` or `nginx`
+- launch `Amazon Linux 2023`
+- use `EC2 Instance Connect` or SSH
+- install Java 21
+- run the Spring Boot JAR
+- add `systemd` and `Nginx`
 
-### 03. S3 + Spring Boot
+</details>
+
+<details>
+<summary><strong>03 - Use S3 with Spring Boot</strong></summary>
 
 Start here: [docs/03-s3-with-spring-boot/README.md](docs/03-s3-with-spring-boot/README.md)
 
 Topics:
 
-- Create an S3 bucket
-- Upload and download files
-- Manage access with IAM roles
-- Use the AWS SDK in Spring Boot
-- Store user-uploaded files
+- create a private S3 bucket
+- connect the AWS SDK for Java 2.x
+- upload and list files
+- use IAM roles instead of keys
+- generate presigned URLs
 
-### 04. Lambda for Java
+</details>
+
+<details>
+<summary><strong>04 - Build a Java Lambda</strong></summary>
 
 Start here: [docs/04-lambda-for-java/README.md](docs/04-lambda-for-java/README.md)
 
 Topics:
 
-- What serverless means
-- Java Lambda handler basics
-- Packaging and deployment
-- Trigger ideas
-- When to use Lambda vs EC2
-- Current Java runtime options
+- current Lambda Java runtime options
+- handler structure
+- packaging and deploy commands
+- when Lambda is a good fit
 
-### 05. Next steps
+</details>
+
+<details>
+<summary><strong>05 - Next services to learn</strong></summary>
 
 Continue here: [docs/05-next-steps/README.md](docs/05-next-steps/README.md)
 
 Topics:
 
-- API Gateway
-- RDS
-- CloudWatch
-- Elastic Beanstalk
-- ECS and containers
-- CI/CD with GitHub Actions
+- `API Gateway`
+- `RDS`
+- `CloudWatch`
+- `ECS`
+- `CI/CD`
 
-## Suggested project journey
+</details>
 
-If you want one practical end-to-end path:
+<details>
+<summary><strong>06 - Production capstone</strong></summary>
 
-1. Build a small Spring Boot REST API locally
-2. Deploy it on `EC2`
-3. Add file upload with `S3`
-4. Add a small background task with `Lambda`
-5. Add monitoring and logging
+Capstone guide: [docs/06-production-capstone/README.md](docs/06-production-capstone/README.md)
 
-## Open source goals
+Topics:
 
-This repository is intended to stay:
+- GitHub Actions CI
+- EC2 + Nginx + Spring Boot
+- S3 integration
+- Lambda background task
+- CloudWatch logs
 
-- beginner-friendly
-- practical
-- example-driven
-- safe for public learning
+</details>
 
-## Important notes
+## Real examples
 
-- Never commit AWS access keys or secrets.
-- Always set a billing budget in your AWS account.
-- Clean up resources after practice to avoid unexpected charges.
-- Prefer `aws configure sso` and temporary credentials for local development.
+| Example | Purpose | Link |
+| --- | --- | --- |
+| Todo API | learn EC2 deployment with a real Spring Boot app | [examples/ec2/todo-api/README.md](examples/ec2/todo-api/README.md) |
+| File Upload Service | learn S3 integration in Spring Boot | [examples/s3/file-upload-service/README.md](examples/s3/file-upload-service/README.md) |
+| Hello Lambda | learn Java Lambda packaging and deploy flow | [examples/lambda/hello-lambda/README.md](examples/lambda/hello-lambda/README.md) |
+
+## Production path assets
+
+| Asset | Use |
+| --- | --- |
+| [deploy/ec2/systemd/todo-api.service](deploy/ec2/systemd/todo-api.service) | run the app after reboot |
+| [deploy/ec2/nginx/todo-api.conf](deploy/ec2/nginx/todo-api.conf) | reverse proxy on EC2 |
+| [deploy/ec2/README.md](deploy/ec2/README.md) | deployment asset guide |
+| [.github/workflows/java-examples-ci.yml](.github/workflows/java-examples-ci.yml) | current GitHub Actions CI |
+
+## Important notes for readers
+
+- never commit AWS keys or secrets
+- always enable billing alerts
+- prefer `aws configure sso` for local CLI access
+- prefer IAM roles on EC2 instead of hardcoded keys
+- clean up AWS resources after practice
 
 ## Official references
 
 - AWS account setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html
 - Root user best practices: https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html
-- AWS CLI SSO config: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
+- AWS CLI SSO: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
 - EC2 getting started: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 - EC2 Instance Connect: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html
 - S3 bucket creation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html
 - Lambda Java guide: https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html
+- GitHub Java + Maven workflow: https://docs.github.com/actions/guides/building-and-testing-java-with-maven
+- actions/checkout releases: https://github.com/actions/checkout/releases
+- actions/setup-java: https://github.com/actions/setup-java
 
 ## Repository description
 
 Use this GitHub repository description:
 
-> Step-by-step AWS learning path for Java Spring Boot developers, from account setup to EC2, S3, and Lambda deployment.
+> Step-by-step AWS learning path for Java Spring Boot developers, from account setup to EC2, S3, Lambda, and production-ready deployment basics.
 
 ## License
 

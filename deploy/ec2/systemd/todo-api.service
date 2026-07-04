@@ -1,0 +1,17 @@
+[Unit]
+Description=Todo API Spring Boot service
+After=network.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/home/ec2-user/todo-api
+Environment=PORT=8080
+ExecStart=/usr/bin/java -jar /home/ec2-user/todo-api/todo-api-0.0.1-SNAPSHOT.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

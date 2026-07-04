@@ -1,0 +1,41 @@
+name: Java Examples CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - examples/ec2/todo-api
+          - examples/s3/file-upload-service
+          - examples/lambda/hello-lambda
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Temurin 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+          cache-dependency-path: ${{ matrix.project }}/pom.xml
+
+      - name: Make Maven Wrapper executable
+        working-directory: ${{ matrix.project }}
+        run: chmod +x mvnw
+
+      - name: Run tests
+        working-directory: ${{ matrix.project }}
+        run: ./mvnw -B test
+
+      - name: Package application
+        working-directory: ${{ matrix.project }}
+        run: ./mvnw -B package -DskipTests

@@ -18,6 +18,12 @@ After learning EC2, S3, and Lambda, move into the AWS services that complete a p
 - add a Lambda thumbnail generator
 - add CloudWatch logs and alarms
 
+## Best next reading in this repository
+
+If you want one connected path instead of separate experiments, continue with:
+
+- [docs/06-production-capstone/README.md](../06-production-capstone/README.md)
+
 ## Production mindset
 
 As you move beyond beginner practice, focus on:
