@@ -46,6 +46,8 @@ This repository is designed to fix that gap for Java and Spring Boot developers.
 | `06` | Production capstone project | End-to-end architecture |
 | `07` | Route 53 + ACM + HTTPS | Custom domain and TLS |
 | `08` | Infrastructure as code | Terraform starter path |
+| `09` | Free tier and cost control | Learn with lower risk |
+| `10` | Troubleshooting guide | Fix common beginner issues |
 
 ## Included in this repo
 
@@ -73,6 +75,12 @@ If you already know AWS basics:
 If you want the full production path:
 
 1. [docs/06-production-capstone/README.md](docs/06-production-capstone/README.md)
+
+If you are a student and want a safer low-cost path:
+
+1. [docs/00-aws-account-setup/README.md](docs/00-aws-account-setup/README.md)
+2. [docs/09-cost-and-free-tier/README.md](docs/09-cost-and-free-tier/README.md)
+3. [docs/10-troubleshooting/README.md](docs/10-troubleshooting/README.md)
 
 ## Visual learning path
 
@@ -110,6 +118,11 @@ flowchart LR
 ```text
 aws-for-java-spring-boot-developers/
 +-- .github/
+|   +-- ISSUE_TEMPLATE/
+|   |   +-- bug_report.md
+|   |   +-- documentation_improvement.md
+|   |   +-- student_question.md
+|   +-- pull_request_template.md
 |   +-- workflows/
 |       +-- java-examples-ci.yml
 +-- assets/
@@ -135,6 +148,8 @@ aws-for-java-spring-boot-developers/
 |   +-- 06-production-capstone/
 |   +-- 07-route53-https-custom-domain/
 |   +-- 08-infrastructure-as-code/
+|   +-- 09-cost-and-free-tier/
+|   +-- 10-troubleshooting/
 +-- examples/
 |   +-- ec2/todo-api/
 |   +-- s3/file-upload-service/
@@ -285,6 +300,36 @@ Topics:
 
 </details>
 
+<details>
+<summary><strong>09 - Free tier and cost control</strong></summary>
+
+Start here: [docs/09-cost-and-free-tier/README.md](docs/09-cost-and-free-tier/README.md)
+
+Topics:
+
+- current AWS Free Tier model
+- what changed for accounts created after `July 15, 2025`
+- billing alarms and budget habits
+- free AWS learning resources for students and beginners
+- how to practice while reducing surprise charges
+
+</details>
+
+<details>
+<summary><strong>10 - Troubleshooting guide</strong></summary>
+
+Start here: [docs/10-troubleshooting/README.md](docs/10-troubleshooting/README.md)
+
+Topics:
+
+- EC2 app not loading
+- S3 access denied
+- Lambda deploy or runtime issues
+- HTTPS and DNS mistakes
+- CI and billing troubleshooting
+
+</details>
+
 ## Real examples
 
 | Example | Purpose | Link |
@@ -309,6 +354,15 @@ Reader-friendly entry points:
 - [docs/08-infrastructure-as-code/README.md](docs/08-infrastructure-as-code/README.md)
 - [infra/terraform/ec2-s3-baseline/README.md](infra/terraform/ec2-s3-baseline/README.md)
 
+## Student support and contribution flow
+
+If you are learning in public, improving notes, or reporting a broken step, use:
+
+- [.github/ISSUE_TEMPLATE/student_question.md](.github/ISSUE_TEMPLATE/student_question.md)
+- [.github/ISSUE_TEMPLATE/documentation_improvement.md](.github/ISSUE_TEMPLATE/documentation_improvement.md)
+- [.github/ISSUE_TEMPLATE/bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md)
+- [.github/pull_request_template.md](.github/pull_request_template.md)
+
 ## Screenshots and visuals
 
 This repository now includes:
@@ -328,6 +382,7 @@ Useful links:
 - always enable billing alerts
 - prefer `aws configure sso` for local CLI access
 - prefer IAM roles on EC2 instead of hardcoded keys
+- review the current free tier rules before starting labs
 - clean up AWS resources after practice
 
 ## Official references
@@ -335,10 +390,23 @@ Useful links:
 - AWS account setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html
 - Root user best practices: https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html
 - AWS CLI SSO: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
+- AWS Free Tier overview: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier.html
+- AWS Free Tier plans: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-plans.html
+- AWS Free Tier eligibility: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier-eligibility.html
+- Track Free Tier usage: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/tracking-free-tier-usage.html
 - EC2 getting started: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 - EC2 Instance Connect: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html
+- EC2 Free Tier usage: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-free-tier-usage.html
+- EC2 pricing: https://aws.amazon.com/ec2/pricing/on-demand/
 - S3 bucket creation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html
+- S3 pricing: https://aws.amazon.com/s3/pricing/
 - Lambda Java guide: https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html
+- Lambda pricing: https://aws.amazon.com/lambda/pricing/
+- AWS Training and Certification: https://aws.amazon.com/training/
+- AWS Skill Builder: https://skillbuilder.aws/
+- AWS Academy: https://aws.amazon.com/training/awsacademy/
+- AWS Training Events: https://aws.amazon.com/training/events/
+- AWS Skills Centers: https://aws.amazon.com/training/skills-centers/
 - GitHub Java + Maven workflow: https://docs.github.com/actions/guides/building-and-testing-java-with-maven
 - actions/checkout releases: https://github.com/actions/checkout/releases
 - actions/setup-java: https://github.com/actions/setup-java
