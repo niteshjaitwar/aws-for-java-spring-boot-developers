@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS for Java Spring Boot Developers</title>
+  <meta name="description" content="Beginner-friendly AWS learning path for Java and Spring Boot developers, from account setup to EC2, S3, Lambda, HTTPS, IaC, free tier guidance, and troubleshooting.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:title" content="AWS for Java Spring Boot Developers">
+  <meta property="og:description" content="Step-by-step AWS learning path by niteshjaitwar with EC2, S3, Lambda, HTTPS, IaC, cost control, and troubleshooting.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/">
+  <meta property="og:image" content="https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/assets/social-preview.svg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="AWS for Java Spring Boot Developers">
+  <meta property="twitter:description" content="A public, student-friendly AWS roadmap for Java Spring Boot developers.">
+  <meta property="twitter:image" content="https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/assets/social-preview.svg">
+  <link rel="canonical" href="https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers">niteshjaitwar</a>
+        <div class="topbar-links">
+          <a href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers">Repository</a>
+          <a href="#modules">Modules</a>
+          <a href="#launch">Launch Path</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy reveal">
+          <p class="eyebrow">Open Source AWS Learning Path</p>
+          <h1>AWS for Java Spring Boot Developers</h1>
+          <p class="lead">
+            A public learning hub for beginners, students, and working developers who want to start from zero and reach a real AWS deployment path without outdated steps.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/README.md">Read the main guide</a>
+            <a class="button button-secondary" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/tree/main/examples">Run the examples</a>
+          </div>
+          <div class="status-ribbon">
+            <span>Refreshed against official docs on July 4, 2026</span>
+            <span>Author: niteshjaitwar</span>
+          </div>
+        </section>
+
+        <aside class="hero-panel reveal">
+          <p class="panel-title">Learning arc</p>
+          <div class="orbit-line"></div>
+          <div class="orbit-items">
+            <span>Account</span>
+            <span>Foundations</span>
+            <span>EC2</span>
+            <span>S3</span>
+            <span>Lambda</span>
+            <span>HTTPS</span>
+            <span>IaC</span>
+          </div>
+          <ul class="panel-metrics">
+            <li><strong>11</strong><span>guided modules</span></li>
+            <li><strong>3</strong><span>runnable Java examples</span></li>
+            <li><strong>1</strong><span>production capstone path</span></li>
+          </ul>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="signal-grid">
+        <article class="signal-card warm reveal">
+          <p class="signal-kicker">Student-safe start</p>
+          <h2>Learn with billing awareness first</h2>
+          <p>
+            The repo includes a dedicated free-tier and cost-control chapter so new learners understand current AWS billing changes before launching services.
+          </p>
+          <a href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/09-cost-and-free-tier/README.md">Open the cost guide</a>
+        </article>
+
+        <article class="signal-card cool reveal">
+          <p class="signal-kicker">Real deployment</p>
+          <h2>Deploy Spring Boot on AWS step by step</h2>
+          <p>
+            Move from account creation to EC2, add S3 integration, build Lambda functions, and finish with HTTPS plus infrastructure as code.
+          </p>
+          <a href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/02-ec2-spring-boot-deployment/README.md">Start the EC2 path</a>
+        </article>
+
+        <article class="signal-card mint reveal">
+          <p class="signal-kicker">Public learning repo</p>
+          <h2>Built for contributors and learners</h2>
+          <p>
+            Issue templates, a PR template, diagrams, deployment assets, and curated troubleshooting flow make the project useful beyond a single tutorial.
+          </p>
+          <a href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/tree/main/.github/ISSUE_TEMPLATE">See support templates</a>
+        </article>
+      </section>
+
+      <section class="timeline reveal" id="launch">
+        <div class="section-heading">
+          <p class="eyebrow">Launch Path</p>
+          <h2>Start in the right order</h2>
+        </div>
+        <div class="timeline-track">
+          <article>
+            <span class="step-tag">01</span>
+            <h3>Set up the account safely</h3>
+            <p>Enable MFA, add budgets, and choose the right CLI access path before doing any hands-on work.</p>
+          </article>
+          <article>
+            <span class="step-tag">02</span>
+            <h3>Build AWS fundamentals</h3>
+            <p>Understand regions, IAM, service choices, and the shared responsibility model.</p>
+          </article>
+          <article>
+            <span class="step-tag">03</span>
+            <h3>Deploy real Java workloads</h3>
+            <p>Use EC2 for long-running apps, S3 for files, and Lambda for lightweight serverless tasks.</p>
+          </article>
+          <article>
+            <span class="step-tag">04</span>
+            <h3>Level up to production patterns</h3>
+            <p>Add HTTPS, domain routing, Terraform basics, cost tracking, and troubleshooting habits.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="modules" id="modules">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Modules</p>
+          <h2>Everything mapped in one place</h2>
+        </div>
+        <div class="module-grid">
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/00-aws-account-setup/README.md">
+            <span class="module-number">00</span>
+            <h3>AWS account setup</h3>
+            <p>Safe root-user habits, MFA, budgets, and initial local access.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/01-foundations/README.md">
+            <span class="module-number">01</span>
+            <h3>Foundations</h3>
+            <p>IAM basics, regions, pricing awareness, and service mindset.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/02-ec2-spring-boot-deployment/README.md">
+            <span class="module-number">02</span>
+            <h3>EC2 deployment</h3>
+            <p>Launch, secure, and run a Spring Boot service on Amazon EC2.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/03-s3-with-spring-boot/README.md">
+            <span class="module-number">03</span>
+            <h3>S3 with Spring Boot</h3>
+            <p>Upload files with the AWS SDK and use secure access patterns.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/04-lambda-for-java/README.md">
+            <span class="module-number">04</span>
+            <h3>Lambda for Java</h3>
+            <p>Package, deploy, and reason about Java functions on AWS Lambda.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/05-next-steps/README.md">
+            <span class="module-number">05</span>
+            <h3>Next services</h3>
+            <p>Plan what to learn after the first production-capable basics.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/06-production-capstone/README.md">
+            <span class="module-number">06</span>
+            <h3>Production capstone</h3>
+            <p>Connect EC2, S3, Lambda, Nginx, CloudWatch, and CI flow.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/07-route53-https-custom-domain/README.md">
+            <span class="module-number">07</span>
+            <h3>Route 53 and HTTPS</h3>
+            <p>Use DNS, ACM, and an Application Load Balancer for TLS.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/08-infrastructure-as-code/README.md">
+            <span class="module-number">08</span>
+            <h3>Infrastructure as code</h3>
+            <p>Map manual AWS work into a Terraform starter structure.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/09-cost-and-free-tier/README.md">
+            <span class="module-number">09</span>
+            <h3>Cost and Free Tier</h3>
+            <p>Understand current free-plan rules and reduce billing surprises.</p>
+          </a>
+          <a class="module-card reveal" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/10-troubleshooting/README.md">
+            <span class="module-number">10</span>
+            <h3>Troubleshooting</h3>
+            <p>Debug EC2, S3, Lambda, DNS, CI, and billing issues methodically.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="workspace reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Repo View</p>
+          <h2>Collapsible project map</h2>
+        </div>
+        <details open class="tree-card">
+          <summary>Open the repo structure</summary>
+          <pre><code>aws-for-java-spring-boot-developers/
+|-- .github/
+|   |-- ISSUE_TEMPLATE/
+|   |-- workflows/
+|-- assets/
+|   |-- diagrams/
+|   |-- screenshots/
+|   |-- social/
+|-- deploy/ec2/
+|-- docs/00 ... docs/10
+|-- examples/
+|   |-- ec2/todo-api
+|   |-- s3/file-upload-service
+|   |-- lambda/hello-lambda
+|-- infra/terraform/ec2-s3-baseline
+|-- site/
+|-- README.md</code></pre>
+        </details>
+      </section>
+
+      <section class="resource-band reveal">
+        <div>
+          <p class="eyebrow">Current note</p>
+          <h2>Free-tier guidance changed after July 15, 2025</h2>
+          <p>
+            The repo now calls out the account-date split clearly so readers do not follow old free-tier assumptions.
+          </p>
+        </div>
+        <a class="button button-primary" href="https://github.com/niteshjaitwar/aws-for-java-spring-boot-developers/blob/main/docs/09-cost-and-free-tier/README.md">Read the current billing guide</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>AWS learning repo by <a href="https://github.com/niteshjaitwar">niteshjaitwar</a>.</p>
+      <p id="footer-year">Current public repo build</p>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -19,6 +19,14 @@ This repository is written for readers who want:
 
 The setup flow and AWS guidance in this repository were refreshed against official documentation on `July 4, 2026`.
 
+## Live project site
+
+This repository now includes a GitHub Pages landing site in [site/index.html](site/index.html) and a dedicated Pages workflow in [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml).
+
+Expected public URL after GitHub Pages is enabled for the repository:
+
+- `https://niteshjaitwar.github.io/aws-for-java-spring-boot-developers/`
+
 ## Author
 
 Created and maintained by `niteshjaitwar`.
@@ -125,10 +133,13 @@ aws-for-java-spring-boot-developers/
 |   +-- pull_request_template.md
 |   +-- workflows/
 |       +-- java-examples-ci.yml
+|       +-- deploy-pages.yml
 +-- assets/
 |   +-- diagrams/
 |       +-- aws-learning-roadmap.svg
 |       +-- capstone-architecture.svg
+|   +-- social/
+|       +-- aws-java-spring-social-preview.svg
 |   +-- screenshots/
 |       +-- README.md
 +-- deploy/
@@ -157,6 +168,13 @@ aws-for-java-spring-boot-developers/
 +-- infra/
 |   +-- terraform/
 |       +-- ec2-s3-baseline/
++-- site/
+|   +-- assets/
+|   |   +-- social-preview.svg
+|   +-- index.html
+|   +-- styles.css
+|   +-- script.js
+|   +-- 404.html
 +-- README.md
 +-- LICENSE
 +-- CONTRIBUTING.md
@@ -368,13 +386,17 @@ If you are learning in public, improving notes, or reporting a broken step, use:
 This repository now includes:
 
 - colorful local diagrams that render directly on GitHub
+- a public landing page for GitHub Pages
+- a social preview banner asset for sharing
 - a screenshot capture guide for safe, current AWS console images
 
 Useful links:
 
 - [assets/diagrams/aws-learning-roadmap.svg](assets/diagrams/aws-learning-roadmap.svg)
 - [assets/diagrams/capstone-architecture.svg](assets/diagrams/capstone-architecture.svg)
+- [assets/social/aws-java-spring-social-preview.svg](assets/social/aws-java-spring-social-preview.svg)
 - [assets/screenshots/README.md](assets/screenshots/README.md)
+- [site/index.html](site/index.html)
 
 ## Important notes for readers
 

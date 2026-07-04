@@ -1,0 +1,68 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="74" y1="52" x2="1212" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="0.48" stop-color="#12243D"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF7ED" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#DBEAFE" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDBA74"/>
+      <stop offset="1" stop-color="#86EFAC"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1280" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="40" fill="url(#bg)"/>
+  <circle cx="1084" cy="120" r="156" fill="#F97316" fill-opacity="0.16"/>
+  <circle cx="167" cy="545" r="210" fill="#22C55E" fill-opacity="0.12"/>
+  <circle cx="1220" cy="513" r="120" fill="#FACC15" fill-opacity="0.12"/>
+
+  <g opacity="0.18">
+    <path d="M78 77H1202" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M78 160H1202" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M78 243H1202" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M78 326H1202" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M78 409H1202" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 10"/>
+    <path d="M78 492H1202" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6 10"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="62" y="64" width="1160" height="512" rx="34" fill="#07101D" fill-opacity="0.7" stroke="#93C5FD" stroke-opacity="0.26"/>
+  </g>
+
+  <text x="100" y="144" fill="#F8FAFC" font-size="28" font-family="'Segoe UI', Arial, sans-serif" letter-spacing="6">NITESHJAITWAR | OPEN SOURCE | AWS LEARNING PATH</text>
+  <text x="100" y="238" fill="#FFF7ED" font-size="68" font-weight="700" font-family="'Segoe UI', Arial, sans-serif">AWS for Java Spring Boot Developers</text>
+  <text x="100" y="294" fill="#BFDBFE" font-size="28" font-family="'Segoe UI', Arial, sans-serif">Step-by-step from AWS account setup to EC2, S3, Lambda, HTTPS, IaC, cost control, and troubleshooting.</text>
+
+  <g>
+    <path d="M120 386H1126" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="176" cy="386" r="18" fill="#F59E0B"/>
+    <circle cx="366" cy="386" r="18" fill="#3B82F6"/>
+    <circle cx="556" cy="386" r="18" fill="#22C55E"/>
+    <circle cx="746" cy="386" r="18" fill="#14B8A6"/>
+    <circle cx="936" cy="386" r="18" fill="#F97316"/>
+    <circle cx="1126" cy="386" r="18" fill="#A78BFA"/>
+    <text x="122" y="434" fill="#FED7AA" font-size="24" font-family="'Segoe UI', Arial, sans-serif">Account</text>
+    <text x="312" y="434" fill="#BFDBFE" font-size="24" font-family="'Segoe UI', Arial, sans-serif">Foundations</text>
+    <text x="517" y="434" fill="#BBF7D0" font-size="24" font-family="'Segoe UI', Arial, sans-serif">EC2</text>
+    <text x="708" y="434" fill="#99F6E4" font-size="24" font-family="'Segoe UI', Arial, sans-serif">S3</text>
+    <text x="882" y="434" fill="#FDBA74" font-size="24" font-family="'Segoe UI', Arial, sans-serif">Lambda</text>
+    <text x="1083" y="434" fill="#DDD6FE" font-size="24" font-family="'Segoe UI', Arial, sans-serif">IaC</text>
+  </g>
+
+  <g>
+    <rect x="100" y="474" width="358" height="68" rx="22" fill="url(#card)"/>
+    <text x="134" y="518" fill="#111827" font-size="28" font-weight="700" font-family="'Segoe UI', Arial, sans-serif">Beginner-friendly | Current as of July 4, 2026</text>
+  </g>
+
+  <g>
+    <rect x="872" y="474" width="292" height="68" rx="22" fill="#F8FAFC" fill-opacity="0.16" stroke="#F8FAFC" stroke-opacity="0.24"/>
+    <text x="909" y="518" fill="#F8FAFC" font-size="28" font-weight="700" font-family="'Segoe UI', Arial, sans-serif">github.com/niteshjaitwar</text>
+  </g>
+</svg>
