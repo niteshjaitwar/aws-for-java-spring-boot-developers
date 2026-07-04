@@ -4,6 +4,8 @@ Step-by-step AWS learning repository for Java and Spring Boot developers who wan
 
 This repository is designed for beginners who know Java or Spring Boot but are new to AWS. It starts with creating an AWS account and then moves into practical hands-on work with `EC2`, `S3`, and `Lambda`.
 
+The setup flow and service docs in this repository were refreshed against official AWS documentation on `July 4, 2026`.
+
 ## Who this repo is for
 
 - Java developers starting AWS from scratch
@@ -19,6 +21,14 @@ This repository is designed for beginners who know Java or Spring Boot but are n
 - How to store and serve files with `S3`
 - How to write and run Java-based `Lambda` functions
 - How to think about cost, security, and production basics
+
+## What is included now
+
+- a runnable Spring Boot Todo API for `EC2`
+- a runnable Spring Boot file upload service for `S3`
+- a runnable Java `Lambda` sample
+- current AWS console navigation names and updated CLI commands
+- direct links to official AWS documentation
 
 ## Learning path
 
@@ -88,7 +98,7 @@ Topics:
 - Create your AWS account
 - Set up MFA
 - Understand billing and free tier
-- Create an IAM admin user
+- Set up `IAM Identity Center` or an IAM admin user
 - Avoid using the root user for daily work
 
 ### 01. Foundations
@@ -110,8 +120,8 @@ Start here: [docs/02-ec2-spring-boot-deployment/README.md](docs/02-ec2-spring-bo
 Topics:
 
 - Launch an EC2 instance
-- Connect with SSH
-- Install Java and Maven
+- Connect with `EC2 Instance Connect` or SSH
+- Install Java 21 on Amazon Linux 2023
 - Build and run a Spring Boot JAR
 - Configure security groups
 - Run the app behind `systemd` or `nginx`
@@ -124,7 +134,7 @@ Topics:
 
 - Create an S3 bucket
 - Upload and download files
-- Manage access with IAM
+- Manage access with IAM roles
 - Use the AWS SDK in Spring Boot
 - Store user-uploaded files
 
@@ -139,6 +149,7 @@ Topics:
 - Packaging and deployment
 - Trigger ideas
 - When to use Lambda vs EC2
+- Current Java runtime options
 
 ### 05. Next steps
 
@@ -177,6 +188,17 @@ This repository is intended to stay:
 - Never commit AWS access keys or secrets.
 - Always set a billing budget in your AWS account.
 - Clean up resources after practice to avoid unexpected charges.
+- Prefer `aws configure sso` and temporary credentials for local development.
+
+## Official references
+
+- AWS account setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html
+- Root user best practices: https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html
+- AWS CLI SSO config: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html
+- EC2 getting started: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
+- EC2 Instance Connect: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html
+- S3 bucket creation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html
+- Lambda Java guide: https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html
 
 ## Repository description
 

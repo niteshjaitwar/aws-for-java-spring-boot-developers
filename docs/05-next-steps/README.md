@@ -27,4 +27,4 @@ As you move beyond beginner practice, focus on:
 - logging
 - backups
 - infrastructure automation
-
+- moving from click-ops to IaC with tools like AWS CloudFormation, AWS CDK, or Terraform

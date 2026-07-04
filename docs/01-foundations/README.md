@@ -16,6 +16,8 @@ Availability Zones are isolated locations inside a region.
 
 IAM controls who can access which AWS resources.
 
+For human access, current AWS guidance prefers temporary credentials and federation over long-lived IAM user credentials.
+
 ### EC2
 
 EC2 gives you virtual servers in the cloud.
@@ -33,6 +35,7 @@ Lambda runs code without managing servers directly.
 - `EC2` feels closest to a traditional VM deployment.
 - `S3` is usually the simplest way to handle file storage.
 - `Lambda` is useful for event-driven or lightweight backend tasks.
+- `IAM roles` are preferred over hardcoded keys.
 
 ## Recommended order
 
@@ -42,3 +45,10 @@ Lambda runs code without managing servers directly.
 4. Add S3
 5. Then learn Lambda
 
+## Recommended CLI habit
+
+Use named profiles and check identity before running commands:
+
+```bash
+aws sts get-caller-identity --profile your-profile-name
+```
