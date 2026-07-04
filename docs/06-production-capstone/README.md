@@ -247,6 +247,48 @@ By the end of this capstone, the reader should have:
 - one CI workflow in GitHub Actions
 - a much clearer mental model of how AWS services work together
 
+## Real-life scenario
+
+Think of this capstone as a simplified version of a startup backend.
+
+Example:
+
+- customers call a Spring Boot API
+- the API stores business data
+- files are uploaded to `S3`
+- a background task runs in `Lambda`
+- engineers deploy and validate through GitHub Actions
+
+This is exactly the kind of system a junior or mid-level Java developer may help maintain.
+
+## Portfolio and interview value
+
+If you finish this capstone properly, you can talk about:
+
+- deploying a Spring Boot app on AWS
+- connecting compute, storage, CI, and background jobs
+- using IAM roles instead of access keys
+- troubleshooting logs across multiple layers
+
+That is much stronger than saying you only watched AWS videos.
+
+## Interview preparation
+
+### Common interview questions
+
+1. Can you describe an AWS architecture for a Spring Boot application?
+2. How do EC2, S3, Lambda, and CI/CD fit together?
+3. How would you secure AWS access for the application?
+4. Where would you look first if uploads succeed but background processing fails?
+
+### Good answer direction
+
+- the core API can run on EC2 behind Nginx
+- S3 handles uploaded files
+- Lambda handles focused async work
+- GitHub Actions validates builds before deployment
+- IAM roles and logs are central for secure operations and debugging
+
 ## Official references
 
 - GitHub Java + Maven workflow: https://docs.github.com/actions/guides/building-and-testing-java-with-maven

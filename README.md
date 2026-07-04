@@ -17,6 +17,8 @@ This repository is written for readers who want:
 - no skipped setup details
 - real runnable Java examples
 - current AWS console names and current CLI commands
+- practical scenarios that feel like real work
+- interview-focused explanations and questions
 
 The setup flow and AWS guidance in this repository were refreshed against official documentation on `July 4, 2026`.
 
@@ -70,6 +72,8 @@ This repository is designed to fix that gap for Java and Spring Boot developers.
 - a real `GitHub Actions` CI workflow
 - deployable `systemd` and `Nginx` config for EC2
 - visual diagrams and step-by-step module docs
+- practical scenarios and hands-on exercises in every module
+- interview preparation prompts across the learning path
 
 ## Best place to start
 

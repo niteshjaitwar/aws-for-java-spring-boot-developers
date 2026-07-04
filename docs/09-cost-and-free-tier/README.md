@@ -153,6 +153,38 @@ If a student wants to learn AWS without spending much:
 - use the repo's diagrams and docs next
 - then move into the smallest possible hands-on experiments
 
+## Real-life scenario
+
+A student creates an EC2 instance on Friday, forgets about it, and checks the account two weeks later.
+
+That is one of the most common beginner AWS mistakes.
+
+This chapter exists so learners understand that cloud skill includes cost awareness, not just service knowledge.
+
+## Practical budget exercise
+
+Before you do the next AWS lab:
+
+1. confirm your account creation date
+2. read the correct Free Tier model for that date
+3. create one monthly budget
+4. create one forecast alert
+5. decide which resource you will delete immediately after practice
+
+## Interview preparation
+
+### Common interview questions
+
+1. What AWS cost risk is most common for beginners?
+2. Why should EC2 be treated more carefully than light Lambda experiments?
+3. How would you keep a training account under control?
+
+### Good answer direction
+
+- running compute longer than intended is a common cost problem
+- EC2 continues billing while active, while small Lambda usage is often lower risk for learning
+- budgets, alerts, cleanup discipline, and free-tier tracking are basic cost controls
+
 ## Official references
 
 - AWS Free Tier overview: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier.html

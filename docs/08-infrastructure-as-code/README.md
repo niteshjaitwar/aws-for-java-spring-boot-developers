@@ -77,9 +77,57 @@ The current AWS CDK official Java path is here:
 - review changes before apply
 - start with a small environment first
 
+## Real-life scenario
+
+A developer manually creates an EC2 instance, a security group, and an S3 bucket in the console.
+
+Two months later, another team member needs the same environment.
+
+Nobody remembers every click.
+
+This is the moment when teams realize manual setup does not scale.
+
+Infrastructure as code solves that problem.
+
+## Practical example
+
+In this repository, the Terraform starter represents a simple but realistic baseline:
+
+- compute with EC2
+- file storage with S3
+- IAM access between them
+- network rules in a security group
+
+That is exactly the kind of small first stack many teams codify.
+
+## Hands-on exercise
+
+As you read the Terraform files, map each resource to the manual setup chapter:
+
+1. find the EC2 instance resource
+2. find the security group resource
+3. find the IAM role and policy attachment
+4. find the S3 bucket resource
+5. explain which console step each one replaces
+
+## Interview preparation
+
+### Common interview questions
+
+1. Why is infrastructure as code better than manual console setup?
+2. What is configuration drift?
+3. Why might a team choose Terraform?
+4. What should be reviewed before applying IaC changes?
+
+### Good answer direction
+
+- IaC makes infrastructure repeatable and reviewable
+- configuration drift happens when real resources no longer match the intended design
+- Terraform is common, declarative, and works across providers
+- plans and security implications should be reviewed before apply
+
 ## Official references
 
 - Terraform AWS provider best practices: https://docs.aws.amazon.com/prescriptive-guidance/latest/terraform-aws-provider-best-practices/terraform-aws-provider-best-practices.html
 - Terraform security best practices: https://docs.aws.amazon.com/prescriptive-guidance/latest/terraform-aws-provider-best-practices/security.html
 - AWS CDK home: https://docs.aws.amazon.com/cdk/v2/guide/home.html
-

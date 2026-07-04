@@ -94,6 +94,56 @@ Prefer EC2 when:
 - you want full OS-level control
 - the application is already designed as a traditional web server
 
+## Real-life scenario
+
+A user uploads an image through your Spring Boot app.
+
+You do not want the main API request to spend time resizing that image.
+
+Instead:
+
+1. the file lands in `S3`
+2. an event can trigger `Lambda`
+3. Lambda resizes the image or writes a small audit record
+
+This is one of the most common real-world Lambda patterns.
+
+## Practical example for Java developers
+
+Imagine an online document platform:
+
+- the main API runs on `EC2`
+- user files go to `S3`
+- a Java `Lambda` extracts metadata or sends a notification
+
+That separation keeps the main application simpler and makes background work easier to scale.
+
+## Hands-on exercise
+
+After creating the sample function:
+
+1. invoke it from the AWS Console
+2. invoke it from the CLI
+3. inspect the CloudWatch logs
+4. update the code and redeploy it
+5. explain in one sentence why this work could be Lambda instead of EC2
+
+## Interview preparation
+
+### Common interview questions
+
+1. What kinds of workloads fit Lambda well?
+2. Why is Lambda often used with S3 events?
+3. Why can Java cold starts matter in Lambda?
+4. When would you choose EC2 instead of Lambda?
+
+### Good answer direction
+
+- Lambda fits short-lived, event-driven, and bursty tasks
+- S3 can trigger Lambda automatically after object events
+- Java functions may have higher startup overhead than lighter runtimes
+- EC2 is better for long-running APIs or workloads needing full server control
+
 ## Official references
 
 - Lambda Java guide: https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html

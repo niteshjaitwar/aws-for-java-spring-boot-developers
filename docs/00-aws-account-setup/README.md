@@ -65,6 +65,62 @@ By the end of this section, you should have:
 - one safe daily-access method
 - budget alerts configured
 
+## Real-life scenario
+
+Imagine you just joined a small startup as a Java developer.
+
+The team asks you to deploy a Spring Boot service to AWS for the first time.
+
+Before touching EC2, S3, or Lambda, the team expects you to:
+
+- secure the root account
+- create a safe daily login method
+- make sure billing alerts exist
+- avoid creating long-lived access keys unless there is a real reason
+
+This is exactly how AWS begins in real companies.
+
+Not with code.
+
+With account safety.
+
+## Practical exercise
+
+Do this in your own AWS account:
+
+1. enable MFA for the root user
+2. create one monthly budget
+3. configure one CLI login path
+4. verify your identity with `aws sts get-caller-identity`
+5. sign out and stop using the root user for normal work
+
+If you cannot complete these five tasks, you are not ready for the next chapter yet.
+
+## Interview preparation
+
+### Common interview questions
+
+1. Why should the AWS root account not be used for daily work?
+2. What is the difference between the root user and an IAM user or federated user?
+3. Why are temporary credentials preferred?
+4. Why should billing alerts be configured before starting labs?
+
+### Good answer direction
+
+- root user has full account-level privileges and should be reserved for rare account tasks
+- IAM or federated access is safer for daily operations
+- temporary credentials reduce long-term secret risk
+- billing alerts prevent surprise charges during experimentation
+
+## How this appears in a project
+
+In a real delivery project, this chapter maps to onboarding tasks such as:
+
+- securing the AWS account before the first deployment
+- enabling access for developers
+- creating billing visibility for managers and engineers
+- creating the first safe CLI workflow for deployment or automation
+
 ## Official references
 
 - AWS account setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html

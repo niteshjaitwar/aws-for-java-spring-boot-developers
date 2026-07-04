@@ -202,6 +202,56 @@ For the cleanest learning path:
 
 That way readers learn each layer one by one.
 
+## Real-life scenario
+
+A product manager does not want to share an EC2 public IP with customers.
+
+They want:
+
+- `api.yourcompany.com`
+- browser-trusted HTTPS
+- safer production routing
+
+This is where `Route 53`, `ACM`, and an `Application Load Balancer` become part of the design.
+
+## Practical example
+
+Suppose your Spring Boot API is already reachable at:
+
+```text
+http://3.110.10.20
+```
+
+You want to move it to:
+
+```text
+https://api.example.com
+```
+
+The clean AWS-native answer is:
+
+1. request a certificate in ACM
+2. create an ALB
+3. register the EC2 instance in a target group
+4. create a Route 53 alias record
+5. redirect HTTP to HTTPS
+
+## Interview preparation
+
+### Common interview questions
+
+1. Why not attach ACM directly to a plain EC2 instance?
+2. Why use an ALB in front of the application?
+3. What is DNS validation in ACM?
+4. Why is Route 53 aliasing to the ALB better than pointing directly to the EC2 IP?
+
+### Good answer direction
+
+- ACM integrates with supported AWS services such as ALB rather than being installed like a server certificate package on plain EC2
+- ALB gives HTTPS termination, routing, and a cleaner production setup
+- DNS validation proves domain ownership
+- an ALB-based setup is more flexible and production-friendly than exposing a raw instance IP
+
 ## Official references
 
 - Route 53 domain registration: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html
@@ -210,4 +260,3 @@ That way readers learn each layer one by one.
 - ACM DNS validation: https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html
 - Route 53 alias to ELB: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html
 - ALB HTTPS certificates: https://docs.aws.amazon.com/elasticloadbalancing/latest/application/https-listener-certificates.html
-

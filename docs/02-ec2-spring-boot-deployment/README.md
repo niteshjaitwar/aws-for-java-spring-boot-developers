@@ -134,6 +134,75 @@ sudo journalctl -u todo-api -f
 - forgetting to persist the process after SSH disconnect
 - not tracking EC2 costs
 
+## Real-life scenario
+
+A company has a monolithic Spring Boot application that already works on a VM.
+
+The easiest first AWS migration is often:
+
+- launch EC2
+- install Java
+- copy the JAR
+- run it behind `nginx`
+
+This is not the most cloud-native design.
+
+But it is realistic, common, and a very strong starting point for Java developers.
+
+## Practical deployment example
+
+Imagine you are deploying a small internal HR API.
+
+The company wants:
+
+- one public URL
+- one Linux server
+- one Spring Boot JAR
+- restart on reboot
+- logs available for debugging
+
+Your EC2 deployment gives them exactly that.
+
+This is why EC2 is still important in interviews and real jobs.
+
+## What to explain in an interview
+
+If someone asks, "How would you deploy a Spring Boot app on AWS?", a solid beginner-to-mid answer is:
+
+1. create an EC2 instance in the correct region
+2. restrict inbound traffic with a security group
+3. install Java and copy the packaged JAR
+4. run the app with `systemd` so it survives logout and reboot
+5. optionally place `nginx` in front for port `80` and reverse proxy
+6. avoid hardcoded AWS keys by using an IAM role
+7. monitor logs and clean up the instance when not needed
+
+## Hands-on exercise
+
+After finishing this chapter, prove the setup works:
+
+1. reboot the EC2 instance
+2. confirm the app still starts automatically
+3. confirm the health endpoint works
+4. confirm only required ports are open
+5. confirm the app user is not running as root
+
+## Interview preparation
+
+### Common interview questions
+
+1. Why use `systemd` instead of running `java -jar` in a shell?
+2. What is the difference between a security group and a firewall rule on the OS?
+3. Why put `nginx` in front of Spring Boot?
+4. Why should files not be permanently stored only on the EC2 instance?
+
+### Good answer direction
+
+- `systemd` manages restart behavior and boot-time startup
+- security groups control instance-level network access in AWS
+- `nginx` can handle standard ports, proxying, and later TLS integration
+- EC2 instance storage is not the right durable design for application file uploads
+
 ## Official references
 
 - EC2 getting started: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html

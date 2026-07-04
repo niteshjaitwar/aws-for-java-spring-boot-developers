@@ -159,6 +159,50 @@ Check:
 - check logs before changing everything
 - change one thing at a time
 
+## Real-life scenario
+
+In real projects, cloud debugging is rarely one-layer debugging.
+
+A request may pass through:
+
+- DNS
+- load balancer
+- EC2
+- Spring Boot
+- S3 or Lambda
+
+This means a strong AWS developer does not guess randomly.
+
+They isolate the failing layer.
+
+## Practical debugging method
+
+Use this order when a feature breaks:
+
+1. confirm the user-facing symptom
+2. identify the AWS service involved
+3. test network reachability
+4. test application health
+5. inspect logs
+6. inspect IAM permissions if access is denied
+7. change one thing and retest
+
+## Interview preparation
+
+### Common interview questions
+
+1. How do you debug a Spring Boot app that works locally but fails on EC2?
+2. How do you debug `AccessDenied` with S3?
+3. Where do you look when a Lambda function returns an error?
+4. How do you approach a multi-service production issue?
+
+### Good answer direction
+
+- compare runtime environment differences, logs, networking, and startup configuration
+- verify IAM policy, role attachment, bucket name, and region for S3 issues
+- check CloudWatch logs and handler configuration for Lambda
+- isolate the failing layer instead of changing many things at once
+
 ## When to open a GitHub issue
 
 Open an issue if:
@@ -171,4 +215,3 @@ Open an issue if:
 Use the issue templates in:
 
 - [.github/ISSUE_TEMPLATE](../../.github/ISSUE_TEMPLATE)
-

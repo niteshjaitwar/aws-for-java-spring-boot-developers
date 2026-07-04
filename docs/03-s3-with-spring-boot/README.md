@@ -83,6 +83,67 @@ Instead:
 - storing secrets in code
 - uploading very large files without validation
 
+## Real-life scenario
+
+A user uploads a resume, profile photo, invoice, or PDF report in your application.
+
+That file should usually not live only on the application server.
+
+Why:
+
+- EC2 instances can be replaced
+- local disk is not the right long-term file strategy
+- multiple app servers would not share the same local files automatically
+
+This is where S3 fits naturally.
+
+## Practical Spring Boot scenario
+
+Imagine a job portal built with Spring Boot:
+
+- user profile data stays in the database
+- uploaded resumes go to `S3`
+- application metadata stores the S3 object key
+- download access is given through a presigned URL
+
+That design is common, scalable, and easy to explain in interviews.
+
+## Hands-on exercise
+
+Complete these steps with the example project:
+
+1. create one private bucket
+2. upload one test file from the application
+3. list uploaded objects
+4. generate one presigned URL
+5. confirm the bucket is still not public
+
+## What to say in an interview
+
+If someone asks, "How do you store files in AWS from a Spring Boot app?", a strong answer is:
+
+1. keep the bucket private
+2. let the application upload through the AWS SDK
+3. use an IAM role on EC2 or another compute service
+4. store object metadata in the database if needed
+5. return presigned URLs instead of exposing the bucket publicly
+
+## Interview preparation
+
+### Common interview questions
+
+1. Why choose S3 over storing files on the EC2 filesystem?
+2. What is a presigned URL?
+3. Why should a backend bucket usually stay private?
+4. Why are IAM roles preferred over access keys for S3 access from EC2?
+
+### Good answer direction
+
+- S3 is durable object storage and survives server replacement
+- a presigned URL gives temporary controlled access to a private object
+- a private bucket reduces accidental public exposure
+- IAM roles are safer than embedding static secrets
+
 ## Official references
 
 - S3 getting started: https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html
